@@ -1,0 +1,493 @@
+/*assets/style.css*/
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+* {
+    font-family: Optima, Calibri, Arial, sans-serif; 
+    color: #fff;
+}
+
+body{
+    background-color: #3b3b3b;
+    font-size: 14px;
+    min-width: 720px;
+}
+
+#topContainer {
+    min-height: 100%;
+    width: 100%;
+}
+
+/*styling the left navigation pane */
+#navBarContainer {
+    background-color: #000;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navBar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+.navBar .logo {
+    padding-bottom: 15px;
+}
+.navBar .logo img {
+    width: 35px;
+}
+.navBar .group {
+    border-top: 1px solid #a0a0a0;
+    padding: 10px 0;
+}
+.navBar .navItem {
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+.navBar .navItemLink {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+.navBar .navItemLink:hover{
+    color: #ffffff;
+}
+.navBar .navItemLink .searchIcon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 25px;
+}
+
+/* styling the bottom page */
+#nowPlayingBarContainer {
+    width: 100%;
+    background-color: #606060;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
+ }
+
+ #nowPlayingBar {
+    display: flex;
+    height: 90px;
+    padding: 15px;
+    box-sizing: border-box;
+ }
+
+ #nowPlayingLeft,
+ #nowPlayingRight {
+    width: 30%;
+    min-width: 180px;
+ }
+ #nowPlayingCenter {
+    width: 40%;
+    max-width: 700px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+ }
+
+ #nowPlayingBar .content{
+     width: 100%;
+     height: 100%;
+ }
+
+ .playerControls .buttons{
+    margin: 0 auto;
+    display: table;
+ }
+ .controlButton {
+    background-color: transparent;
+    border: none; 
+    vertical-align: middle;
+ }
+ .controlButton:hover{
+     cursor: pointer;
+ }
+ .controlButton img{
+    height: 20px;
+    width: 20px;
+ }
+ /* no space in same class entities */
+ .controlButton.play img,
+ .controlButton.pause img {
+     width: 32px;
+     height: 32px;
+ }
+
+ .playbackBar {
+    display: flex;
+ }
+.progressTime {
+    color: #a0a0a0;
+    font-size: 12px;
+    min-width: 40px;
+    text-align: center;
+}
+.progressBar {
+    width: 100%;
+    height: 12px;
+    display: inline-flex;
+    cursor: pointer;
+}
+.progressBarBg {
+    background-color: #404040;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+.progress{
+    background-color: #a0a0a0;
+    height: 4px;
+    width: 0;
+    border-radius: 2px;
+}
+.playbackBar .progressBar {
+    margin-top: 3px;
+}
+
+#nowPlayingLeft .albumArtwork {
+    height: 100%;
+    width: 57px;
+    background-size: cover;
+    margin-right: 15px;
+    float: left;
+}
+
+#nowPlayingLeft .trackInfo {
+    display: table;
+}
+
+#nowPlayingLeft .trackInfo .trackName {
+    margin: 6px 0;
+    display: inline-block ;
+    width: 100%;
+}
+
+#nowPlayingLeft .trackInfo .artistName span {
+    color: #a0a0a0;
+    font-size: 13px;
+}
+
+#nowPlayingRight .volumeBar {
+    width: 180px;
+    position: absolute;
+    right: 0;
+}
+#nowPlayingRight .volumeBar .progressBar {
+    width: 100px;
+}
+#nowPlayingRight {
+    position: relative;
+    margin-top: 16px;
+}
+
+/*styling the main body view which containes all albums */
+#mainViewContainer{
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
+}
+#mainContent{
+    padding: 0 20px;
+}
+
+.pageHeadingBig {
+    padding: 10px;
+    text-align: center;
+}
+
+.gridViewItem {
+    display: inline-block;
+    margin: 10px;
+    width: 30%;
+    max-width: 100px;
+    min-width: 75px;
+}
+.gridViewItem img {
+    width: 100%;
+}
+.gridViewItem a {
+    text-decoration: none;
+}
+    
+.gridViewInfo {
+    text-align: center;
+    padding-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+/*styling each album page */
+.entityInfo{
+    padding: 40px 0 10px 0;
+    display: inline-block;
+    width: 100%;
+}
+.entityInfo .leftSection {
+    width: 30%;
+    float: left;
+    max-width: 250px;
+}
+.entityInfo .leftSection img {
+    width: 100%;
+}
+.entityInfo .rightSection {
+    width: 70%;
+    float: left;
+    padding: 5px 10px 5px 40px;
+    box-sizing: border-box; /*width includes padding*/
+}
+.entityInfo .rightSection h2 {
+    margin-top: 0;
+}
+.entityInfo .rightSection p {
+    color: #a0a0a0;
+}
+
+/*styling the tracklistContainer */
+.tracklist {
+    padding: 0;
+}
+.tracklist .tracklistRow {
+    list-style: none;
+    height: 40px;
+    padding:15px;
+}
+.tracklistRow:hover{
+    background-color: #000;
+}
+.tracklistRow span {
+    color: #a0a0a0;
+}
+.tracklistRow .trackCount {
+    width: 8%;
+    float: left;
+}
+.tracklistRow .trackCount img{
+    visibility: hidden;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+}
+.tracklistRow:hover .trackCount img{
+    visibility: visible;
+}
+.tracklistRow .trackCount span{
+    visibility: visible;
+}
+.tracklistRow:hover .trackCount span{
+    visibility: hidden;
+}
+.tracklistRow .trackInfo{
+    width:  75%;
+    float: left;
+}
+.tracklistRow .trackInfo span{
+    display: block;
+}
+.tracklistRow .trackInfo .trackName{
+    color:#fff;
+    margin-bottom: 5px;
+}
+.tracklistRow .trackOptions{
+    width: 5%;
+    float: left;
+    text-align: right;
+}
+.tracklistRow .trackOptions img{
+    width: 15px;
+    visibility: hidden;
+}
+.tracklistRow:hover .trackOptions img{
+    visibility: visible;
+}
+.tracklistRow .trackDuration {
+    width: 12%;
+    float: left;
+    text-align: right;
+}
+
+.optionsMenu {
+    position: fixed;
+    background-color: #000;
+    width: 200px;
+    border: 1px solid rgba(160, 160, 160, 0.45);
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+.optionsMenu .item {
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    font-weight: 300;
+    color: #a0a0a0;
+    cursor: pointer;
+    height: 40px;
+    background-color: #000;
+    font-size: 14px;
+}
+.optionsMenu .item:hover {
+    color: #fff;
+    border: none;
+}
+.optionsMenu .item.playlist {
+    border: none;
+    -webkit-appearance: none; /* get rid of default css for html 'select' for safari and chrome*/
+    -moz-appearance: none; /*same for mozilla */
+}
+
+/*styling artist.php*/
+.artistInfo {
+    text-align: center;
+}
+
+/*creates a default style for use across the website
+and special variations using additional class as below*/
+.button {
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 500px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px;
+    min-width: 130px;
+}
+.button.green {
+    background-color: #37a753;
+    border-color: #37a753;
+}
+.borderBottom {
+    border-bottom: 1px solid #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.tracklistContainer h2, 
+.gridViewContainer h2,
+.artistsContainer h2 {
+    text-align: center;
+}
+
+/*adds cursor to all role attributes*/
+[role="link"] {
+    cursor: pointer;
+}
+
+/*search.php styles */
+.searchContainer {
+    padding: 20px 10px;
+    background-color: #353535;
+}
+.searchContainer h4 {
+    margin: 0;
+    font-weight: 300;
+}
+.searchContainer .searchInput {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+/* removes accessibility focus */
+input:focus {
+    outline: none;
+}
+.searchResultRow {
+    padding: 15px 10px;
+}
+.searchResultRow:hover {
+    background-color: #000;
+}
+.searchResultRow .artistName span {
+    color: #fff;
+}
+span.noResults {
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* styling yourMusic.php*/
+.buttonItems .button {
+    display: block;
+    margin: 0px auto 10px auto;
+}
+.playlistsContainer {
+    padding: 10px 0px;
+}
+
+/*profile.php */
+.entityInfo .userInfo h1 {
+    text-align: center;
+}
+
+/* user updateDetails.php*/
+.userDetails {
+    padding: 15px;
+}
+
+.userDetails .container h2{
+    text-align: center;
+}
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container .button {
+    display: block;
+    margin: 15px auto; /* centers on the page */
+}
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #000;
+    font-size: 19px;
+    border: none;
+}
+.userDetails .container .message {
+    padding: 0px 10px;
+    color: green;
+}
+
+/*change the color of placeholder values in form fields. 
+we need separate rules for each browser. 
+Otherwise the whole group would be ignored by all browsers
+https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  #555;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:  #555;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:  #555;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:  #555;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:  #555;
+}
+::placeholder { /* Most modern browsers support this now. */
+   color: #555;
+}
+

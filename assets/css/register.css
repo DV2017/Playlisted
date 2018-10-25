@@ -1,0 +1,151 @@
+/*assets/register.css*/
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#background {
+    background-color: black;
+    background-image: url(../images/register.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table; /*understand this better */
+    height: 100%;
+    width: 100%;
+}
+
+#loginContainer * {
+    color: #fff;
+    font-family: "Optima", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+#loginContainer {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1024px;  
+}
+
+/*change the color of placeholder values in form fields. 
+we need separate rules for each browser. 
+Otherwise the whole group would be ignored by all browsers
+https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  #555;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:  #555;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:  #555;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:  #555;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:  #555;
+}
+::placeholder { /* Most modern browsers support this now. */
+   color: #555;
+}
+
+/*Change Text Selection Color*/
+/* Mozilla based browsers */
+::-moz-selection {
+    background-color: #a1a1a1;
+}
+/* Works in Safari */
+::selection {
+    background-color: #a1a1a1;
+}
+
+#inputContainer {
+    width: 400px;
+    padding: 45px;
+    float: left;
+    border-right: 1px solid #999;
+}
+#inputContainer h2 {
+    text-align: center;
+ }
+ #inputContainer input[type="text"],
+ #inputContainer input[type="email"],
+ #inputContainer input[type="password"]{
+    display: block;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+ }
+ #inputContainer label {
+    color: #fff;
+    font-size: 13.5px;
+    margin-top: 15px;
+ }
+ #inputContainer button {
+    background: transparent;
+    border: 2px solid #37a753;
+    border-radius: 2em;
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    font-size: 15px;
+    letter-spacing: 1px;
+    height: 40px;
+ }
+ #inputContainer button:hover {
+    cursor: pointer;
+ }
+ #inputContainer .errorMessage {
+    color: #FF630D;
+    font-size: 12px;
+ }
+
+ .hasAccountText span {
+    font-size: 0.8em;
+    cursor: pointer;
+ }
+ .hasAccountText {
+    text-align: center;
+ }
+
+/*this hides the form when user loads and leaves it to jquery to handle it*/
+#registerForm, #loginForm {
+     display: none;
+ }
+
+ #loginText {
+    padding: 45px;
+    display: table-cell;
+ }
+ #loginText h1 {
+    color: #37a753;
+    font-family: "impact", "arial", sans-serif;
+    font-size: 50px;
+ }
+ #loginText h2 {
+    margin: 40px 0;
+ }
+#loginText ul{
+    padding: 0;
+}
+/* visit website icons8 https://icons8.com for colour icons */
+#loginText li {
+    font-size: 20px;
+    list-style-type: none; 
+    padding: 10px 50px;
+    background: url(../images/icons/checkmark.png) no-repeat;
+ }
+
+#inputContainer .errorMessage {
+    color: #FF630D;
+    font-size: 12px;
+ }
